@@ -1,0 +1,741 @@
+body {
+  /*MONITOR*/
+  /*MONITOR*/
+  /*PC*/
+  /*PC*/
+  /*TABLET*/
+  /*TABLET*/
+  /*PHONE*/
+  /*PHONE*/
+}
+@media only screen and (min-width: 1200px) {
+  body {
+    /*management.html*/
+    /*management.html*/
+    overflow: hidden;
+  }
+  body .cards {
+    height: 43%;
+    /*home.html*/
+    /*home.html*/
+    /*employee.html*/
+    /*employee.html*/
+    /*birthday.html*/
+    /*birthday.html*/
+    /*announcement-detail.html*/
+    /*announcement-detail.html*/
+    /*contact.html*/
+    /*contact.html*/
+    /*about.html*/
+    /*about.html*/
+    /*management-login.html*/
+    /*management-login.html*/
+  }
+  body .cards .card-1,
+  body .cards .card-2,
+  body .cards .card-3 {
+    width: 100%;
+    margin-bottom: 7%;
+    padding-bottom: 5%;
+    height: 100%;
+  }
+  body .cards .card-1 .employees-button-div,
+  body .cards .card-2 .employees-button-div,
+  body .cards .card-3 .employees-button-div {
+    margin-top: -22%;
+  }
+  body .cards .card-1 .birthday-button-div,
+  body .cards .card-2 .birthday-button-div,
+  body .cards .card-3 .birthday-button-div {
+    margin-top: 24%;
+  }
+  body .cards .card-1 .splide,
+  body .cards .card-2 .splide,
+  body .cards .card-3 .splide {
+    width: 80%;
+    max-width: 880px;
+    padding-bottom: 1%;
+  }
+  body .cards .card-1 .splide .splide__pagination__page,
+  body .cards .card-2 .splide .splide__pagination__page,
+  body .cards .card-3 .splide .splide__pagination__page {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  body .cards .card-1 #birthday-table_wrapper,
+  body .cards .card-2 #birthday-table_wrapper,
+  body .cards .card-3 #birthday-table_wrapper {
+    padding: 1%;
+    height: 72%;
+    margin-top: -0.5%;
+  }
+  body .cards .card-1 {
+    width: 30%;
+    padding-top: 3%;
+  }
+  body .cards .card-2 {
+    width: 25%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  body .cards .card-2 .employees-button-div {
+    margin-top: -2%;
+  }
+  body .cards .card-3 {
+    width: 45%;
+  }
+  body .cards .filter-card,
+  body .cards .employee-card {
+    height: auto;
+  }
+  body .cards .efe-card,
+  body .cards .cozum-card,
+  body .cards .emsa-card {
+    width: 100%;
+    height: auto;
+  }
+  body .cards .about-card {
+    height: auto;
+  }
+  body .cards .login-card {
+    height: auto;
+  }
+  body .management-form .about-employee-management-div .employee-management-card input[type=text] {
+    width: 29%;
+  }
+  body .management-form .announcement-management-div .announcement-management-card .announcement-card-div .announcement-card-div-1 input[type=text] {
+    width: 150%;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card {
+    height: 62%;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-1,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-2,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 {
+    height: auto;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-1 .announcement-detail-button-selected,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-2 .announcement-detail-button-selected,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 .announcement-detail-button-selected {
+    margin-top: 5%;
+    font-size: 91.5%;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-1 #management-announcement-editor,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-2 #management-announcement-editor,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 #management-announcement-editor {
+    height: 60px;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-1 .ql-toolbar,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-2 .ql-toolbar,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 .ql-toolbar {
+    height: 60%;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-1 .management-announcement-card-div center,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-2 .management-announcement-card-div center,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 .management-announcement-card-div center {
+    margin-top: 40%;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-1 #management-announcement-table,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-2 #management-announcement-table,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 #management-announcement-table {
+    height: auto;
+  }
+  body .management-form .about-employee-management-div .about-management-card {
+    margin-top: -5%;
+  }
+  body .management-form .employee-management-card-2 #userName {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  body {
+    /*management.html*/
+    /*management.html*/
+    overflow: hidden;
+  }
+  body .cards {
+    height: 50%;
+    /*home.html*/
+    /*home.html*/
+    /*employee.html*/
+    /*employee.html*/
+    /*birthday.html*/
+    /*birthday.html*/
+    /*announcement-detail.html*/
+    /*announcement-detail.html*/
+    /*contact.html*/
+    /*contact.html*/
+    /*about.html*/
+    /*about.html*/
+    /*management-login.html*/
+    /*management-login.html*/
+  }
+  body .cards .card-1,
+  body .cards .card-2,
+  body .cards .card-3 {
+    height: auto;
+    padding: 1.5%;
+  }
+  body .cards .card-1 .employees-button-div,
+  body .cards .card-2 .employees-button-div,
+  body .cards .card-3 .employees-button-div {
+    margin-top: -22%;
+  }
+  body .cards .card-1 .splide,
+  body .cards .card-2 .splide,
+  body .cards .card-3 .splide {
+    width: 70%;
+    max-width: 700px;
+    padding-bottom: 10%;
+  }
+  body .cards .card-1 .splide .splide__pagination__page,
+  body .cards .card-2 .splide .splide__pagination__page,
+  body .cards .card-3 .splide .splide__pagination__page {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  body .cards .card-1 #birthday-table_wrapper,
+  body .cards .card-2 #birthday-table_wrapper,
+  body .cards .card-3 #birthday-table_wrapper {
+    padding: 1%;
+    height: 73.5%;
+  }
+  body .cards .card-2 {
+    width: 35%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  body .cards .birthday-button-div {
+    margin-top: 100%;
+  }
+  body .cards .announcement-card-detail-2 {
+    font-size: 84%;
+  }
+  body .cards .about-card {
+    height: auto;
+  }
+  body .cards .about-card p {
+    font-size: 14px;
+  }
+  body .management-form .announcement-management-div .announcement-management-card .announcement-card-div .announcement-card-div-1 input[type=text] {
+    width: 150%;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card {
+    height: 63%;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-2,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 {
+    height: auto;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-2 .announcement-detail-button-selected,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 .announcement-detail-button-selected {
+    margin-top: 10%;
+    font-size: 91.5%;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-2 #management-announcement-editor,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 #management-announcement-editor {
+    height: 50px;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-2 .ql-toolbar,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 .ql-toolbar {
+    height: 60%;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-2 .management-announcement-card-div center,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 .management-announcement-card-div center {
+    margin-top: 47%;
+  }
+  body .management-form .about-employee-management-div .employee-management-card input[type=text] {
+    width: 20%;
+  }
+  body .management-form .about-employee-management-div .about-management-card {
+    height: 70%;
+  }
+  body .management-form .about-employee-management-div .about-management-card .about-card-div .about-card-div-1 input[type=text] {
+    width: 120%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  body .cards {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    margin-left: 4%;
+    box-shadow: 0px 0px 0px 0px;
+    /*home.html*/
+    /*home.html*/
+    /*employee.html*/
+    /*employee.html*/
+    /*birthday.html*/
+    /*birthday.html*/
+    /*announcement-detail.html*/
+    /*announcement-detail.html*/
+    /*contact.html*/
+    /*contact.html*/
+    /*about.html*/
+    /*about.html*/
+    /*management-login.html*/
+    /*management-login.html*/
+  }
+  body .cards .card-1,
+  body .cards .card-2,
+  body .cards .card-3 {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+    padding-bottom: 5%;
+  }
+  body .cards .card-2 .employees-button-div {
+    margin-top: -5%;
+  }
+  body .cards .filter-card,
+  body .cards .employee-card {
+    height: auto;
+    width: auto;
+  }
+  body .cards .filter-card,
+  body .cards .employee-card {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+    height: auto;
+  }
+  body .cards .birthday-card-1,
+  body .cards .birthday-card-2,
+  body .cards .birthday-card-3 {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+  }
+  body .cards .announcement-card-detail-1-img,
+  body .cards .announcement-card-detail-1-summary,
+  body .cards .announcement-card-detail-3-otherPage-1,
+  body .cards .announcement-card-detail-3-otherPage-2 {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+  }
+  body .cards .announcement-card-detail-1,
+  body .cards .announcement-card-detail-3 {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  body .cards .announcement-card-detail-2 {
+    width: 98%;
+    margin-top: 10%;
+    margin-bottom: 12%;
+    margin-left: 1%;
+    text-align: left;
+    padding: 7%;
+  }
+  body .cards .announcement-card-detail-1 .announcement-card-detail-1-img img {
+    width: 175px;
+    height: auto;
+  }
+  body .cards .efe-card,
+  body .cards .cozum-card,
+  body .cards .emsa-card {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+  }
+  body .cards .about-card {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+  }
+  body .cards .login-card {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+  }
+  body .management-form {
+    flex-direction: column;
+    margin-left: 4%;
+    box-shadow: 0px 0px 0px 0px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    /*management-detail.html*/
+    /*management-detail.html*/
+    /*management.html*/
+    /*management.html*/
+  }
+  body .management-form .management-announcement-card-detail-1-img,
+  body .management-form .management-announcement-card-detail-1-summary {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+  }
+  body .management-form .management-announcement-card-detail-1,
+  body .management-form .management-announcement-card-detail-3 {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  body .management-form .management-announcement-card-detail-2 {
+    width: 98%;
+    margin-bottom: 5%;
+    text-align: left;
+    height: auto;
+  }
+  body .management-form .management-announcement-card-detail-3 {
+    margin: auto;
+  }
+  body .management-form .announcement-management-div {
+    margin-top: 240%;
+  }
+  body .management-form .announcement-card-div .announcement-card-div-1 {
+    margin-top: -2.5%;
+  }
+  body .management-form .announcement-card-div .announcement-card-div-2 {
+    margin-top: -2.5%;
+  }
+  body .management-form .about-employee-management-div,
+  body .management-form .management-submit-card {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+  }
+  body .management-form .announcement-management-div {
+    width: 100%;
+  }
+  body .management-form .announcement-management-div .announcement-management-card {
+    margin-right: 0;
+    margin-left: 0;
+    height: auto;
+  }
+  body .management-form .announcement-management-div .announcement-management-card hr {
+    margin-top: -1.4%;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+    padding-bottom: 195%;
+    border-radius: 20px;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex {
+    flex-direction: column;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-1,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-2,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 {
+    width: auto;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-1 {
+    padding: 4%;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-2 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 {
+    height: 570px;
+    margin-top: 3%;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 #management-announcement-editor {
+    height: 300px;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 .management-announcement-card-div {
+    margin-top: 50%;
+  }
+  body .management-form .employee-management-card-2 #userName {
+    width: 30%;
+  }
+  body .management-form .about-employee-management-div {
+    margin-top: -2%;
+  }
+  body .management-form .about-employee-management-div .employee-management-card {
+    height: auto;
+  }
+  body .management-form .about-employee-management-div .employee-management-card-2 {
+    height: auto;
+  }
+  body .management-form .about-employee-management-div .employee-management-card-2 hr {
+    margin-top: auto;
+  }
+  body .management-form .about-employee-management-div .employee-management-card-2 .employee-img-div img {
+    margin-top: -11%;
+  }
+  body .management-form .about-employee-management-div .about-management-card {
+    margin-left: -0.2%;
+    margin-top: 3%;
+    height: auto;
+  }
+  body .management-form .about-employee-management-div .about-management-card hr {
+    margin-top: auto;
+  }
+  body .management-form .about-employee-management-div .about-management-card #about-card-editor {
+    height: 300px;
+  }
+  body .management-form .about-employee-management-div .about-management-card .about-card-div-2 {
+    margin-left: auto;
+    margin-right: 6%;
+  }
+  body .management-form .about-employee-management-div .about-management-card .about-card-div-2 img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    margin-top: -10%;
+  }
+  body .management-form .about-employee-management-div .about-management-card .about-card-div {
+    margin-top: 5%;
+  }
+  body .bars {
+    display: block;
+  }
+  body .nav-show {
+    display: none;
+  }
+  body .logo-and-nav {
+    justify-content: center;
+  }
+  body .img-logo img {
+    margin-left: 10%;
+    margin-top: 6%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body .cards {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    margin-left: 4%;
+    box-shadow: 0px 0px 0px 0px;
+    margin-top: 4%;
+    /*home.html*/
+    /*home.html*/
+    /*employee.html*/
+    /*employee.html*/
+    /*birthday.html*/
+    /*birthday.html*/
+    /*announcement-detail.html*/
+    /*announcement-detail.html*/
+    /*contact.html*/
+    /*contact.html*/
+    /*about.html*/
+    /*about.html*/
+    /*management-login.html*/
+    /*management-login.html*/
+  }
+  body .cards .card-1,
+  body .cards .card-2,
+  body .cards .card-3 {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+    padding-bottom: 5%;
+  }
+  body .cards .card-2 .employees-button-div {
+    margin-top: -5%;
+  }
+  body .cards .filter-card,
+  body .cards .employee-card {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+    height: auto;
+  }
+  body .cards .birthday-card-1,
+  body .cards .birthday-card-2,
+  body .cards .birthday-card-3 {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+  }
+  body .cards .announcement-card-detail-1-img,
+  body .cards .announcement-card-detail-1-summary,
+  body .cards .announcement-card-detail-3-otherPage-1,
+  body .cards .announcement-card-detail-3-otherPage-2 {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+  }
+  body .cards .announcement-card-detail-1,
+  body .cards .announcement-card-detail-3 {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  body .cards .announcement-card-detail-2 {
+    width: 98%;
+    margin-top: 10%;
+    margin-bottom: 12%;
+    margin-left: 1%;
+    text-align: left;
+    padding: 7%;
+  }
+  body .cards .announcement-card-detail-3-otherPage-1-summary p,
+  body .cards .announcement-card-detail-3-otherPage-2-summary p {
+    font-size: 87%;
+  }
+  body .cards .efe-card,
+  body .cards .cozum-card,
+  body .cards .emsa-card {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+  }
+  body .cards .about-card {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+  }
+  body .cards .login-card {
+    width: 100%;
+    height: 450px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+  }
+  body .management-form {
+    flex-direction: column;
+    margin-left: 4%;
+    box-shadow: 0px 0px 0px 0px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    /*management-detail.html*/
+    /*management-detail.html*/
+    /*management.html*/
+    /*management.html*/
+  }
+  body .management-form .management-announcement-card-detail-1-img,
+  body .management-form .management-announcement-card-detail-1-summary {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+  }
+  body .management-form .management-announcement-card-detail-1,
+  body .management-form .management-announcement-card-detail-3 {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  body .management-form .management-announcement-card-detail-2 {
+    width: 98%;
+    margin-bottom: 5%;
+    text-align: left;
+    height: auto;
+  }
+  body .management-form .management-announcement-card-detail-3 {
+    margin: auto;
+  }
+  body .management-form .about-employee-management-div,
+  body .management-form .management-submit-card {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+  }
+  body .management-form .announcement-management-div {
+    width: 100%;
+  }
+  body .management-form .announcement-management-div .announcement-management-card {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 7%;
+    padding-bottom: 195%;
+    border-radius: 20px;
+    height: 880px;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex {
+    flex-direction: column;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-1,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-2,
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 {
+    width: auto;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-1 {
+    padding: 4%;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-2 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 {
+    height: 270px;
+    margin-top: 3%;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 #management-announcement-editor {
+    height: 100px;
+  }
+  body .management-form .announcement-management-div .announcement-management-table-card .announcement-management-table-card-flex .management-announcement-table-div-3 .management-announcement-card-div {
+    margin-top: 39%;
+  }
+  body .management-form .employee-management-card-2 #userName {
+    width: 30%;
+  }
+  body .management-form .about-employee-management-div {
+    margin-top: 2.8%;
+  }
+  body .management-form .about-employee-management-div .about-management-card {
+    margin-left: -0.2%;
+    margin-top: 3%;
+    height: auto;
+  }
+  body .management-form .about-employee-management-div .about-management-card .about-card-div {
+    margin-top: 14%;
+  }
+  body .management-form .about-employee-management-div .about-management-card .about-card-div-2 {
+    margin-left: auto;
+    margin-right: 6%;
+  }
+  body .management-form .about-employee-management-div .about-management-card .about-card-div-2 img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    margin-top: -10%;
+  }
+  body .bars {
+    display: block;
+  }
+  body .nav-show {
+    display: none;
+  }
+  body .logo-and-nav {
+    justify-content: center;
+  }
+  body .img-logo img {
+    margin-left: 10%;
+    margin-top: 6%;
+  }
+}/*# sourceMappingURL=media-screen.css.map */

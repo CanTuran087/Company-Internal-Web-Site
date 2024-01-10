@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Duyuruların, doğum günlerinin ve çeşitli sayfa geçişlerinin olduğu sayfadır">
+    <meta name="description" content="This is the page with announcements, birthdays and various page transitions.">
+    <title>Canias Project - Ana Sayfa</title>
+</head>
+<link rel="shortcut icon" href="{{ url_for('static', filename = 'img/caniasLogo.jpg') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename = 'scss/hamburger-bar.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename = 'scss/navbar.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename = 'scss/card.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename = 'scss/dark-light-theme.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename = 'scss/media-screen.css') }}">
+
+<!--FONT LİNKLERİ-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@300&family=Roboto:wght@300&display=swap"
+    rel="stylesheet" />
+<!--FONT LİNKLERİ-->
+
+<!--IMG SLIDER LINKS-->
+<link rel="stylesheet" href="https://unpkg.com/@splidejs/splide@3.0.8/dist/css/splide.min.css">
+<!--IMG SLIDER LINKS-->
+
+<!--FONTAWESOME ICON-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+<!--FONTAWESOME ICON-->
+
+<body class="home">
+
+    <!--HamBurger Icon-->
+    <div class="bars" id="nav-action">
+        <span class="bar"> </span>
+    </div>
+    <!--HamBurger Icon-->
+
+    <!--Navbar Links-->
+    <div class="logo-and-nav">
+        <div class="img-logo">
+            <a href="home">
+                <img src="{{ url_for('static', filename = 'img/logo.png') }}" alt="">
+            </a>
+        </div>
+
+        <nav class="nav-show">
+            <ul>
+                <li class="dark-light-theme"></li>
+                <li class="home-li"><a href="home" class="home-a">Ana Sayfa</a></li>
+                <li class="contact-li"><a href="contact" class="contact-a">İletişim</a></li>
+                <li class="about-li"><a href="about" class="about-a">Hakkımızda</a></li>
+                <li class="management-li"><a href="management-login" class="management-a">Yönetim Paneli</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <nav id="nav">
+        <ul>
+            <li class="shape-circle circle-one"><a href="management-login">Yönetim Paneli</a></li>
+            <li class="shape-circle circle-two"><a href="about">Hakkımızda</a></li>
+            <li class="shape-circle circle-three"><a href="contact">İletişim</a></li>
+            <li class="shape-circle circle-five"><a href="home">Ana Sayfa</a></li>
+        </ul>
+    </nav>
+    
+    <!--Navbar Links-->
+
+    <!--Cards-->
+    <div class="cards">
+        <div class="card-1">
+            <table id="birthday-table" class="display compact" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>AD SOYAD</th>
+                        <th>KALAN GÜN</th>
+                        <th>YAŞ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for birthdays in birthday %}
+                        <tr>
+                            <td style="cursor: context-menu;">
+                                <p>{{ birthdays.NAME }}</p>
+                            </td>
+                            {% if birthdays.KACGUNKALDI == 'BUGÜN DOĞUM GÜNÜ' %}
+                                <td style="cursor: context-menu;">
+                                <p>
+                                    {{ birthdays.KACGUNKALDI }} <span class="firework hidden">🎆</span>
+                                </p>
+                                </td>
+                            {% else %}
+                                <td style="cursor: context-menu;">
+                                <p>{{ birthdays.KACGUNKALDI }}</p>
+                                </td>
+                            {% endif %}
+                            <td style="cursor: context-menu;">
+                                <p>{{ birthdays.YAS }}</p>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="birthday-button-div">
+                <a href="birthday">Doğum Günü Ekranına Git</a>
+            </div>
+        </div>
+        <div class="card-2">
+            <div class="img-div">
+                {% set imgSourceFileEmployee = employeeIMG %}
+                <img src="{{ imgSourceFileEmployee }}" alt="">
+            </div>
+
+            <div class="employees-button-div">
+                <a href="employee">Çalışanlar Ekranına Git</a>
+            </div>
+        </div>
+        <div class="card-3">
+
+            <form action="" method="POST">
+            
+                <div class="splide" id="image-slider">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+
+                        {% for announcements in announcement %}
+
+                            {% set imgSourceFile = announcements.BASE64FILE %}
+                            {% set imgSourceName = announcements.STEXT %}
+                            {% set uniqueId = 'announcement-detail-base64-p-2-' + loop.index|string %}
+
+                            <li class="splide__slide">
+
+                                {%if imgSourceFile == ""%}
+                                    <img src="{{ url_for('static', filename = 'img/imgSRC.jpg') }}" id="announcement-detail-base64-img" class="base64Img"/>
+                                {%else%}
+                                    <img src="{{ imgSourceFile }}" id="announcement-detail-base64-img" class="base64Img"/>
+                                {%endif%}
+                                <p id="announcement-detail-base64-p" >{{announcements.STEXT}}</p>
+                                <input style="display:none;" type="text" name="announcement-ID" id="{{ uniqueId }}" value="{{announcements.ID}}" >
+                            </li>
+
+                        {% endfor %}
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="announcement-detail-button-div">
+                    <a class="announcement-detail-button-a" href="#">Duyuru Detayına Git</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <!--Cards-->
+
+    <div id="scroll-to-top" class="arrow-button-hidden">
+        <a href="#top">
+            <i class="fa fa-arrow-up"></i>
+        </a>
+    </div>
+
+</body>
+
+<!--DATATABLE LINKS-->
+<link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+<link
+    href="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.7.0/dt-1.13.6/af-2.6.0/b-2.4.2/b-colvis-2.4.2/b-html5-2.4.2/b-print-2.4.2/cr-1.7.0/date-1.5.1/fc-4.3.0/fh-3.4.0/kt-2.10.0/r-2.5.0/rg-1.4.1/rr-1.4.1/sc-2.2.0/sb-1.6.0/sp-2.2.0/datatables.min.css"
+    rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+<script
+    src="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.7.0/dt-1.13.6/af-2.6.0/b-2.4.2/b-colvis-2.4.2/b-html5-2.4.2/b-print-2.4.2/cr-1.7.0/date-1.5.1/fc-4.3.0/fh-3.4.0/kt-2.10.0/r-2.5.0/rg-1.4.1/rr-1.4.1/sc-2.2.0/sb-1.6.0/sp-2.2.0/datatables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<!--DATATABLE LINKS-->
+
+<!--DATATABLE EXTRA LINKS-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+<!--DATATABLE EXTRA LINKS-->
+
+<!--IMG SLIDER LINKS-->
+<script src="https://unpkg.com/@splidejs/splide@3.0.8/dist/js/splide.min.js"></script>
+<!--IMG SLIDER LINKS-->
+
+<script src="{{ url_for('static', filename = 'js/script.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/script4.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/script7.js') }}"></script>
+
+</html>

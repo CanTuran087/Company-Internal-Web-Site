@@ -1,0 +1,130 @@
+$font-family: "Bebas Neue", sans-serif;
+$color1: #eb8d61d8;
+$color2: #6e40ebb0;
+$color3: #408aebb0;
+$color4: #fff;
+$color5: #2b21212a;
+$box-shadow-style: 4px 4px 8px 0.4px $color2;
+
+body {
+    .cards {
+        .birthday-card-1,
+        .birthday-card-2,
+        .birthday-card-3 {
+            height: 350px;
+            border-radius: 20px;
+            box-shadow: $box-shadow-style;
+            background-color: $color4;
+            width: 35%;
+            padding: 1%;
+            text-align: center;
+        }
+
+        .birthday-card-1 {
+            width: 30.5%;
+            #birthday-table-2_wrapper {
+                margin-top: 5%;
+
+                th,
+                td {
+                    text-align: center;
+                }
+
+                th {
+                    background-color: $color3;
+                    color: $color4;
+                    font-weight: 100;
+                    font-size: 80%;
+                }
+            }
+        }
+
+        .birthday-card-2 {
+            margin: 0px 13px 0px 13px;
+
+            .birthday-card-img-div {
+                img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 10px;
+                }
+            }
+
+            .birthday-card-data-div {
+                margin-top: 10%;
+
+                table {
+                    margin-right: 8%;
+                    
+                    th {
+                        text-align: left;
+                        margin-top: 4%;
+                        color: black;
+                    }
+
+                    td {
+                        padding-left: 10%;
+                        input {
+                            margin-top: 4%;
+                            width: 120%;
+                            border-radius: 3px;
+                            color: black;
+                            border: 1px solid $color2;
+                        }
+                    }
+                }
+            }
+        }
+
+        .birthday-card-3 {
+            #birthday-card-editor{
+                border: 1.5px solid $color1;
+                width: 100%;
+                height: 50%;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+            .ql-toolbar{
+                border: 1.5px solid $color1;
+                border-bottom: 0px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+            input[type="submit"]{
+                margin-top: 2%;
+                border: 4px solid $color1;
+                border-radius: 10px;
+                padding: 2.2%;
+                color: $color4;
+                background-color: $color1;
+            }
+
+            input[type="submit"]:hover {
+                color: $color4;
+                background-color: $color2;
+                transition: 0.2s ease-in-out;
+                border: 2px solid $color2;
+            }
+        }
+    }
+
+    .firework2 {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        animation: explode 1s ease-out infinite;
+    }
+    
+    @keyframes explode {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(10);
+            opacity: 0;
+        }
+    }
+}

@@ -1,0 +1,156 @@
+body .cards .efe-card,
+body .cards .cozum-card,
+body .cards .emsa-card {
+  height: 350px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px 0.4px rgba(110, 64, 235, 0.6901960784);
+  background-color: #fff;
+  width: 35%;
+  padding: 1%;
+  text-align: center;
+}
+body .cards .efe-card {
+  margin: 0px 13px 0px 13px;
+}
+body .cards .efe-cozum-emsa-img {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  border-bottom: 1px solid rgba(110, 64, 235, 0.6901960784);
+}
+body .cards .efe-cozum-emsa-img img {
+  width: 40%;
+  height: 120%;
+  text-align: center;
+}
+body .cards .efe-cozum-emsa-table {
+  margin-top: 10%;
+  font-size: 85%;
+  text-align: left;
+  text-align: center;
+}
+body .cards .efe-cozum-emsa-table .contact-div-1 i p {
+  font-family: "Bebas Neue", sans-serif;
+  margin-top: 2%;
+}
+body .cards .efe-cozum-emsa-table .contact-div-1 .fa-location-dot {
+  color: rgb(38, 184, 38);
+}
+body .cards .efe-cozum-emsa-table .contact-div-1 .fa-location-dot p {
+  color: black;
+}
+body .cards .efe-cozum-emsa-table .contact-div-1 .fa-phone {
+  color: rgb(38, 184, 38);
+}
+body .cards .efe-cozum-emsa-table .contact-div-1 .fa-phone p {
+  color: black;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 {
+  margin: 3%;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 a {
+  text-decoration: none;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 i {
+  font-size: 200%;
+  margin: 2%;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .hidden-text {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 1%;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .envelope-link {
+  position: relative;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .envelope-link .fa-envelope {
+  color: rgb(255, 145, 0);
+  border-radius: 10%;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .envelope-link:hover {
+  margin-right: 13.5%;
+  transition: 1s ease;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .envelope-link:hover .hidden-text {
+  display: block;
+  color: rgb(255, 145, 0);
+  transform: translate(88%, -50%);
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .linkedin-link {
+  position: relative;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .linkedin-link .fa-linkedin {
+  color: rgb(38, 87, 184);
+  border-radius: 10%;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .linkedin-link:hover {
+  margin-right: 13.5%;
+  transition: 1s ease;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .linkedin-link:hover .hidden-text {
+  display: inline-block;
+  color: rgb(38, 87, 184);
+  transform: translate(88%, -50%);
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .youtube-link {
+  position: relative;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .youtube-link .fa-youtube {
+  color: rgb(253, 61, 61);
+  border-radius: 10%;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .youtube-link:hover {
+  margin-right: 13.5%;
+  transition: 1s ease;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .youtube-link:hover .hidden-text {
+  display: inline-block;
+  color: rgb(253, 61, 61);
+  transform: translate(106%, -50%);
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .facebook-link {
+  position: relative;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .facebook-link .fa-facebook {
+  color: #096ecc;
+  border-radius: 10%;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .facebook-link:hover {
+  margin-right: 13.5%;
+  transition: 1s ease;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .facebook-link:hover .hidden-text {
+  display: inline-block;
+  color: #096ecc;
+  transform: translate(90%, -50%);
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .instagram-link {
+  color: #fff;
+  position: relative;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .instagram-link .fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  border-radius: 10%;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .instagram-link:hover {
+  margin-right: 13.5%;
+  transition: 1s ease;
+}
+body .cards .efe-cozum-emsa-table .contact-div-2 .instagram-link:hover .hidden-text {
+  display: inline-block;
+  color: #d6249f;
+  transform: translate(81%, -50%);
+}
+body .cards .efe-cozum-emsa-table .contact-div-3 {
+  margin-top: 10%;
+}
+body .cards .efe-cozum-emsa-table .contact-div-3 a {
+  text-decoration: none;
+  color: rgba(64, 138, 235, 0.6901960784);
+  font-size: 110%;
+}
+body .cards .efe-cozum-emsa-table .contact-div-3 a:hover {
+  font-size: 140%;
+  transition: 0.3s ease-in;
+}/*# sourceMappingURL=contact.css.map */

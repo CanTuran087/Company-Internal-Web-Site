@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body .bars {
+  display: none;
+}
+body .logo-and-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .logo-and-nav .img-logo {
+  width: 30%;
+  margin-top: 1%;
+  margin-left: 3%;
+}
+body .logo-and-nav .img-logo img {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .logo-and-nav .nav-show {
+  margin-right: 6%;
+}
+body .logo-and-nav .nav-show ul {
+  display: flex;
+  padding: 0;
+}
+body .logo-and-nav .nav-show ul li {
+  margin: 0 15px;
+  font-family: "Bebas Neue", sans-serif;
+  font-style: bold;
+  font-weight: 600;
+  font-size: 110%;
+}
+body .logo-and-nav .nav-show ul li a {
+  text-decoration: none;
+  color: rgba(110, 64, 235, 0.6901960784);
+  position: relative;
+}
+body .logo-and-nav .nav-show ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: rgba(64, 138, 235, 0.6901960784);
+  transition: width 0.3s;
+}
+body .logo-and-nav .nav-show ul li a:hover::before {
+  width: 100%;
+}
+body .logo-and-nav .nav-show ul li i {
+  cursor: pointer;
+}/*# sourceMappingURL=navbar.css.map */

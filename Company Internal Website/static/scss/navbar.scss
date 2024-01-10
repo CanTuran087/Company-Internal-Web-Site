@@ -1,0 +1,77 @@
+$font-family: "Bebas Neue", sans-serif;
+$color1: #eb8d61d8;
+$color2: #6e40ebb0;
+$color3: #408aebb0;
+$color4: #fff;
+$color5: #2b21212a;
+$color6: #101820ff;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    .bars {
+        display: none;
+    }
+
+    .logo-and-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .img-logo {
+            width: 30%;
+            margin-top: 1%;
+            margin-left: 3%;
+
+            img {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .nav-show {
+            margin-right: 6%;
+
+            ul {
+                display: flex;
+                padding: 0;
+                li {
+                    margin: 0 15px;
+                    font-family: $font-family;
+                    font-style: bold;
+                    font-weight: 600;
+                    font-size: 110%;
+
+                    a {
+                        text-decoration: none;
+                        color: $color2;
+                        position: relative;
+                    }
+
+                    a::before {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        width: 0;
+                        height: 2px;
+                        background: $color3;
+                        transition: width 0.3s;
+                    }
+
+                    a:hover::before {
+                        width: 100%;
+                    }
+
+                    i{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

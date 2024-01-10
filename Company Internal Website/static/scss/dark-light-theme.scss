@@ -1,0 +1,528 @@
+$font-family: "Bebas Neue", sans-serif;
+$color1: #eb8d61d8;
+$color11: rgb(216, 216, 82);
+$color2: #6e40ebb0;
+$color3: #408aebb0;
+$color4: #fff;
+$color5: #2b21212a;
+$color6: #101820ff;
+$box-shadow-style: 4px 4px 8px 0.4px $color2;
+$box-shadow-style-2: 1px 1px 8px 0.4px $color4;
+
+body {
+    .cards.clicked {
+        background-color: $color6;
+        transition: 0.2s ease-in;
+
+        .card-1,
+        .card-2,
+        .card-3,
+        .company2-card,
+        .company1-card,
+        .company3-card,
+        .announcement-card-detail-1-img,
+        .announcement-card-detail-1-summary,
+        .announcement-card-detail-2,
+        .announcement-card-detail-3-otherPage-1,
+        .announcement-card-detail-3-otherPage-2,
+        .filter-card,
+        .employee-card,
+        .birthday-card-1,
+        .birthday-card-2,
+        .birthday-card-3,
+        .about-card,
+        .login-card,
+        .management-announcement-card-detail-1-img,
+        .management-announcement-card-detail-1-summary,
+        .management-announcement-card-detail-2,
+        .management-announcement-card-detail-3,
+        .announcement-management-card,
+        .announcement-management-table-card,
+        .employee-management-card,
+        .employee-management-card-2,
+        .about-management-card,
+        .management-submit-card {
+            background-color: black;
+            transition: 0.2s ease-in;
+            box-shadow: $box-shadow-style-2;
+
+            label,
+            p,
+            .about-p {
+                color: $color4;
+                transition: 0.2s ease-in;
+            }
+
+            h3 {
+                color: $color3;
+                transition: 0.2s ease-in;
+            }
+
+            .company1-company2-company3-img {
+                border-bottom: 0.5px solid $color4;
+                transition: 0.2s ease-in;
+                img {
+                    border-radius: 10px;
+                    transition: 0.2s ease-in;
+                }
+            }
+
+            .fa-location-dot p,
+            .fa-phone p,
+            .birthday-card-data-div th {
+                color: white;
+                font-weight: 100;
+                transition: 0.2s ease-in;
+            }
+
+            .instagram-link {
+                color: black;
+                transition: 0.2s ease-in;
+            }
+
+            .contact-div-3 {
+                a {
+                    color: $color1;
+                    transition: 0.2s ease-in;
+                }
+            }
+
+            #birthday-table_wrapper,
+            #employee-table_wrapper,
+            #birthday-table-2_wrapper,
+            .announcement-management-table-card-flex
+                .management-announcement-table-div-1
+                #management-announcement-table_wrapper {
+                transition: 0.2s ease-in;
+                padding: 1%;
+
+                th {
+                    background-color: $color2;
+                    color: $color4;
+                    font-weight: 100;
+                    font-size: 80%;
+                }
+
+                .odd {
+                    background-color: $color6;
+                    transition: 0.2s ease-in;
+                }
+
+                .even {
+                    background-color: $color3;
+                    transition: 0.2s ease-in;
+                }
+
+                img {
+                    border-radius: 2.5px;
+                    transition: 0.2s ease-in;
+                }
+            }
+
+            .splide__slide {
+                img {
+                    border-radius: 50px;
+                    transition: 0.2s ease-in;
+                }
+            }
+
+            .filter-ComboBox,
+            #employee-select {
+                color: $color4;
+                background-color: $color6;
+                transition: 0.2s ease-in;
+            }
+
+            .filter-ComboBox:focus {
+                border: 1.5px solid $color1;
+            }
+
+            .arrow-button-employee {
+                button {
+                    background-color: $color3;
+                    border: 4px solid $color3;
+                    color: $color4;
+                    transition: 0.2s ease-in-out;
+                }
+
+                button:hover {
+                    color: $color4;
+                    background-color: black;
+                    border: 2px solid $color3;
+                }
+            }
+
+            #employee-table_wrapper {
+                .buttons-pdf,
+                .buttons-excel,
+                .buttons-copy {
+                    border: 1px solid $color3;
+                    background-color: $color3;
+                    color: $color4;
+                    transition: 0.2s ease-in-out;
+                }
+
+                .buttons-pdf:hover,
+                .buttons-excel:hover,
+                .buttons-copy:hover {
+                    border: 1px solid $color3;
+                    background-color: $color4;
+                    color: $color2;
+                    transition: 0.2s ease;
+                }
+            }
+
+            #employee-table_filter label {
+                color: $color4;
+                transition: 0.2s ease-in-out;
+
+                input[type="search"]::placeholder {
+                    color: $color3;
+                    transition: 0.2s ease-in-out;
+                }
+            }
+
+            input[type="button"],
+            #file-selectButton-1,
+            #file-selectButton-2,
+            #file-selectButton-3,
+            #file-selectButton-4,
+            #delete-button-1,
+            #delete-button-2,
+            #delete-button-3,
+            #delete-button-4,
+            #announcement-detail-button {
+                background-color: $color3;
+                border: 2px solid $color3;
+                color: $color4;
+                transition: 0.2s ease-in-out;
+            }
+
+            input[type="button"]:hover,
+            #file-selectButton-1:hover,
+            #file-selectButton-2:hover,
+            #file-selectButton-3:hover,
+            #file-selectButton-4:hover,
+            #delete-button-1:hover,
+            #delete-button-2:hover,
+            #delete-button-3:hover,
+            #delete-button-4:hover,
+            #announcement-detail-button:hover {
+                color: $color4;
+                background-color: black;
+                border: 2px solid $color3;
+            }
+
+            .birthday-button-div a,
+            .employees-button-div a,
+            .announcement-detail-button-div a,
+            .announcement-card-detail-3-otherPage-1-button a,
+            .announcement-card-detail-3-otherPage-2-button a {
+                background-color: $color3;
+                border-color: $color3;
+                transition: 0.2s ease-in;
+            }
+
+            .birthday-button-div a:hover,
+            .employees-button-div a:hover,
+            .announcement-detail-button-div a:hover,
+            .announcement-card-detail-3-otherPage-1-button a:hover,
+            .announcement-card-detail-3-otherPage-2-button a:hover {
+                background-color: $color6;
+                color: $color4;
+                transition: 0.2s ease-in;
+            }
+
+            .splide__arrow--prev,
+            .splide__arrow--next,
+            .splide__pagination__page {
+                background-color: $color4;
+                transition: 0.2s ease;
+            }
+
+            .splide__arrow--prev:hover,
+            .splide__arrow--next:hover,
+            .splide__pagination__page.is-active {
+                background-color: $color3;
+                transition: 0.2s ease;
+            }
+
+            .birthday-card-data-div {
+                input {
+                    color: $color4;
+                    border: 1px solid $color3;
+                    transition: 0.2s ease;
+                    font-weight: 100;
+                    background-color: $color6;
+                }
+            }
+            .ql-toolbar {
+                background-color: $color6;
+                transition: 0.2s ease;
+            }
+
+            input[type="submit"] {
+                border: 4px solid $color3;
+                color: $color4;
+                background-color: $color3;
+                transition: 0.2s ease;
+            }
+
+            input[type="submit"]:hover {
+                color: $color4;
+                background-color: $color6;
+                border: 2px solid $color3;
+            }
+
+            input[type="text"],
+            input[type="password"],
+            #filePath-1,
+            #filePath-2,
+            #filePath-3,
+            #filePath-4 {
+                color: $color4;
+                background-color: $color6;
+                transition: 0.2s ease-in;
+                border-color: $color4;
+            }
+
+            input[type="text"]:focus,
+            input[type="password"]:focus {
+                border: 1.5px solid $color4;
+            }
+
+            input[type="text"]::placeholder,
+            input[type="password"]::placeholder {
+                color: $color3;
+                transition: 0.2s ease-in;
+            }
+
+            .management-announcement-table-div-1,
+            .management-announcement-table-div-2,
+            .management-announcement-table-div-3 {
+                background-color: $color6;
+                transition: 0.2s ease-in;
+
+                #management-announcement-table_wrapper {
+                    border: 0px;
+                    padding: 0%;
+                }
+
+                .ql-editor {
+                    background-color: black;
+                    border-radius: 10px;
+                    border-color: $color11;
+                }
+
+                input[type="button"] {
+                    border: 2px solid $color3;
+                    color: $color4;
+                    background-color: $color3;
+                    transition: 0.2s ease;
+                }
+
+                input[type="button"]:hover {
+                    color: $color4;
+                    background-color: $color6;
+                    border: 2px solid $color3;
+                }
+
+                input[type="text"] {
+                    color: $color4;
+                    background-color: black;
+                    transition: 0.2s ease-in;
+                    border-color: $color4;
+                }
+
+                input[type="text"]::placeholder {
+                    color: $color3;
+                    transition: 0.2s ease-in;
+                }
+            }
+
+            .management-announcement-table-div-3 {
+                center {
+                    #management-announcement-editor {
+                        border: 1.5px solid $color11;
+                    }
+
+                    .ql-toolbar {
+                        border-color: $color11;
+                    }
+                }
+            }
+            center {
+                #announcement-card-editor,
+                #about-card-editor {
+                    border: 1.5px solid $color11;
+                }
+
+                .ql-toolbar {
+                    border-color: $color11;
+                }
+            }
+
+            #birthday-card-editor {
+                border: 1.5px solid $color11;
+            }
+
+            .ql-toolbar {
+                border-color: $color11;
+            }
+
+            .management-announcement-card-detail-editor {
+                center {
+                    #announcement-card-detail-editor {
+                        border: 1.5px solid $color11;
+                    }
+                }
+            }
+        }
+    }
+
+    .announcement-management-card .announcement-card-div .announcement-card-div-1 {
+        input[type="button"] {
+            border: 2px solid $color3;
+            color: $color4;
+            background-color: $color3;
+            transition: 0.2s ease;
+        }
+
+        input[type="button"]:hover {
+            color: $color4;
+            background-color: $color6;
+            border: 2px solid $color3;
+        }
+    }
+
+    .cards.clicked2 {
+        background-color: $color4;
+        transition: 0.2s ease-in;
+
+        .card-1,
+        .card-2,
+        .card-3,
+        .company2-card,
+        .company1-card,
+        .company3-card,
+        .announcement-card-detail-1-img,
+        .announcement-card-detail-1-summary,
+        .announcement-card-detail-2,
+        .announcement-card-detail-3-otherPage-1,
+        .announcement-card-detail-3-otherPage-2,
+        .filter-card,
+        .employee-card,
+        .birthday-card-1,
+        .birthday-card-2,
+        .birthday-card-3,
+        .about-card,
+        .login-card,
+        .management-announcement-card-detail-1-img,
+        .management-announcement-card-detail-1-summary,
+        .management-announcement-card-detail-2,
+        .management-announcement-card-detail-3,
+        .announcement-management-card,
+        .announcement-management-table-card,
+        .employee-management-card,
+        .employee-management-card-2,
+        .about-management-card,
+        .management-submit-card {
+            background-color: $color4;
+            transition: 0.2s ease-in;
+            box-shadow: $box-shadow-style;
+
+            label,
+            p,
+            .company1-company2-company3-img,
+            .fa-location-dot p,
+            .fa-phone p,
+            .instagram-link,
+            .contact-div-3 a,
+            #birthday-table_wrapper,
+            #employee-table_wrapper,
+            #birthday-table_wrapper th,
+            #employee-table_wrapper th,
+            #birthday-table-2_wrapper th,
+            #birthday-table_wrapper .odd,
+            #employee-table_wrapper .odd,
+            #birthday-table-2_wrapper .odd,
+            #birthday-table_wrapper .even,
+            #employee-table_wrapper .even,
+            #birthday-table-2_wrapper .even,
+            .splide__slide img,
+            .filter-ComboBox,
+            .arrow-button-employee button,
+            #employee-table_wrapper .buttons-pdf,
+            #employee-table_wrapper .buttons-excel,
+            #employee-table_wrapper .buttons-copy,
+            #employee-table_filter label,
+            #employee-table_filter label input[type="search"]::placeholder,
+            .birthday-button-div a,
+            .employees-button-div a,
+            .announcement-detail-button-div a,
+            .announcement-card-detail-3-otherPage-1-button a,
+            .announcement-card-detail-3-otherPage-2-button a,
+            .splide__arrow--prev,
+            .splide__arrow--next,
+            .splide__pagination__page,
+            .birthday-card-data-div th,
+            .ql-toolbar,
+            input[type="submit"],
+            h3,
+            input[type="text"],
+            input[type="password"],
+            input[type="text"]::placeholder,
+            input[type="password"]::placeholder,
+            input[type="button"],
+            .management-announcement-table-div-1,
+            .management-announcement-table-div-2,
+            .management-announcement-table-div-3,
+            #file-selectButton-1,
+            #file-selectButton-2,
+            #file-selectButton-3,
+            #file-selectButton-4,
+            #delete-button-1,
+            #delete-button-2,
+            #delete-button-3,
+            #delete-button-4,
+            #announcement-detail-button,
+            #employee-select {
+                transition: 0.2s ease;
+            }
+        }
+    }
+}
+
+body.clicked {
+    background-color: black;
+    transition: 0.2s ease-in;
+
+    .nav-show {
+        ul li a {
+            color: $color4;
+            transition: 0.2s ease-in;
+        }
+
+        .dark-light-theme {
+            color: $color4;
+            transition: 0.2s ease-in;
+        }
+    }
+}
+
+body.clicked2 {
+    background-color: $color4;
+    transition: 0.2s ease-in;
+
+    .nav-show {
+        ul li a {
+            color: $color2;
+            transition: 0.2s ease-in;
+        }
+
+        .dark-light-theme {
+            color: black;
+            transition: 0.2s ease-in;
+        }
+    }
+}

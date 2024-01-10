@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kullanıcıların gördüğü duyurular, çalışanların resimleri, hakkımızda yazısı vb. alanların güncellendiği sayfadır">
+    <meta name="description"
+        content="Announcements that users see, pictures of employees, about us text, etc. This is the page where the fields are updated">
+    <title>Canias Project - Yönetim Paneli</title>
+</head>
+<link rel="shortcut icon" href="{{ url_for('static', filename = 'img/caniasLogo.jpg') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename = 'scss/hamburger-bar.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename = 'scss/navbar.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename = 'scss/card.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename = 'scss/management.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename = 'scss/dark-light-theme.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename = 'scss/media-screen.css') }}">
+
+<!--FONT LİNKLERİ-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@300&family=Roboto:wght@300&display=swap"
+    rel="stylesheet" />
+<!--FONT LİNKLERİ-->
+
+<!--IMG SLIDER LINKS-->
+<link rel="stylesheet" href="https://unpkg.com/@splidejs/splide@3.0.8/dist/css/splide.min.css">
+<!--IMG SLIDER LINKS-->
+
+<!--FONTAWESOME ICON-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+<!--FONTAWESOME ICON-->
+
+<!--TEXT EDITOR-->
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<!--TEXT EDITOR-->
+
+<body>
+
+    <!--HamBurger Icon-->
+    <div class="bars" id="nav-action">
+        <span class="bar"> </span>
+    </div>
+    <!--HamBurger Icon-->
+
+    <!--Navbar Links-->
+    <div class="logo-and-nav">
+        <div class="img-logo">
+            <a href="home.html">
+                <img src="{{ url_for('static', filename = 'img/logo.png') }}" alt="">
+            </a>
+        </div>
+
+        <nav class="nav-show">
+            <ul>
+                <li class="dark-light-theme"></li>
+                <li class="home-li"><a href="home" class="home-a">Ana Sayfa</a></li>
+                <li class="contact-li"><a href="contact" class="contact-a">İletişim</a></li>
+                <li class="about-li"><a href="about" class="about-a">Hakkımızda</a></li>
+                <li class="management-li"><a href="management-login" class="management-a">Yönetim Paneli</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <nav id="nav">
+        <ul>
+            <li class="shape-circle circle-one"><a href="management">Yönetim Paneli</a></li>
+            <li class="shape-circle circle-two"><a href="about">Hakkımızda</a></li>
+            <li class="shape-circle circle-three"><a href="contact">İletişim</a></li>
+            <li class="shape-circle circle-five"><a href="home">Ana Sayfa</a></li>
+        </ul>
+    </nav>
+    <!--Navbar Links-->
+    <form class="cards management-form" method="POST">
+
+        <div class="announcement-management-div">
+            <div class="announcement-management-card">
+                <label for="">Duyuru Ekleme</label>
+                <hr>
+                <center>
+                    <div id="announcement-card-editor"></div>
+                </center>
+
+                <div class="announcement-card-div">
+                    <div class="announcement-card-div-1">
+                        <input type="file" id="fileInput-4" />
+                        <input type="text" id="filePath-4" name="fileName" disabled /><br>
+                        <input type="button" id="file-selectButton-4" value="Dosya Seç">
+                        <input type="button" id="delete-button-4" value="Temizle">
+                        <input type="button" class="announcement-detail-button-summary-exists"
+                            id="announcement-detail-button" value="Detay">
+                    </div>
+
+                    <div class="announcement-card-div-2">
+                        <img src="{{ url_for('static', filename = 'img/imgSRC.jpg') }}" alt="" id="announcement-file-img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="announcement-management-table-card">
+                <label for="">Duyuru Silme ve Güncelleme</label>
+                <hr>
+
+                <div class="announcement-management-table-card-flex">
+                    <div class="management-announcement-table-div-1">
+
+                        <table id="management-announcement-table" class="display compact" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>DUYURU METNİ</th>
+                                    <th>DOSYA ADI</th>
+                                    <th>DUYURU RESMİ</th>
+                                    <th>OLUŞTURAN</th>
+                                    <th>OLUŞTURMA TARİHİ</th>
+                                    <th>RESİM LİNK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for announcement in announcementLists %}
+                                    <tr>
+                                        <td>
+                                            <p>{{announcement.ID}}</p>
+                                        </td>
+                                        <td>
+                                            <p>{{announcement.STEXT}}</p>
+                                        </td>
+                                        <td>
+                                            <p>{{announcement.FILENAME}}</p>
+                                        </td>
+                                        <td>
+                                            {%if announcement.BASE64FILE == ""%}
+                                                <img src="{{ url_for('static', filename = 'img/imgSRC.jpg') }}" alt="">
+                                            {%else%}
+                                                <img src="{{announcement.BASE64FILE}}" alt="">
+                                            {%endif%}
+                                        </td>
+                                        <td>
+                                            <p>{{announcement.CREATEDBY}}</p>
+                                        </td>
+                                        <td>
+                                            <p>{{announcement.CREATEDAT}}</p>
+                                        </td>
+                                        <td>
+                                            {%if announcement.BASE64FILE == ""%}
+                                                <p>{{ url_for('static', filename = 'img/imgSRC.jpg') }}</p>
+                                            {%else%}
+                                                <p>{{announcement.BASE64FILE}}</p>
+                                            {%endif%}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="management-announcement-table-div-2">
+                        <div class="management-announcement-table-div-img">
+                            <img src="{{ url_for('static', filename = 'img/imgSRC.jpg') }}" id="management-announcement-table-img" alt="">
+                            <input type="text" id="table-id" name="table-id" placeholder="ID" disabled />
+                            <input type="text" id="table-fileName" name="table-fileName" placeholder="Dosya Adı"
+                                disabled />
+                            <input type="text" id="table-CreatedBy" name="table-CreatedBy" placeholder="Oluşturan"
+                                disabled />
+                            <input type="text" id="table-CreatedAt" name="table-CreatedAt"
+                                placeholder="Oluşturma Tarihi" disabled />
+                            <input type="button" class="announcement-detail-button-selected"
+                                id="announcement-detail-button" value="Seçili Duyuru Detay">
+                        </div>
+                    </div>
+
+                    <div class="management-announcement-table-div-3">
+                        <center>
+                            <div id="management-announcement-editor"></div>
+                        </center>
+
+                        <div class="management-announcement-card-div">
+                            <center>
+                                <input type="file" id="fileInput-5" />
+                                <input type="text" id="filePath-5" name="fileName" disabled />
+                                <input type="button" class="management-file-button" id="file-selectButton-5"
+                                    value="Dosya Seç">
+                                <input type="button" class="management-file-button" id="delete-button-5"
+                                    value="Temizle">
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-employee-management-div">
+
+            <div class="employee-management-card">
+                <div>
+                    <input type="file" id="fileInput" />
+                    <label for="">Çalışanlar Giriş Resmi</label>
+                    <input type="text" id="filePath" name="fileName" disabled />
+                    <input type="button" id="file-selectButton" value="Dosya Seç">
+                    <input type="button" id="delete-button" value="Temizle">
+                </div>
+            </div>
+
+            <div class="employee-management-card-2">
+                <label for="">Seçili Çalışana Resim Ekleme</label>
+                <hr>
+                <div class="employee-img-div">
+                    <select id="employee-select">
+                        <option>Çalışan Seçiniz</option>
+                        {%for employees in employeeLists%}
+                            <option>{{ employees.NAME }}</option>
+                        {%endfor%}
+                    </select> <br>
+                    <input type="file" id="fileInput-2" />
+                    <input type="text" id="filePath-2" name="fileName" disabled /><br>
+                    <input type="button" id="file-selectButton-2" value="Dosya Seç">
+                    <input type="button" id="delete-button-2" value="Temizle">
+                    <input type="text" id="userName" value="" disabled>
+                    <img src="{{ url_for('static', filename = 'img/imgSRC.jpg') }}" alt="" id="employee-file-img">
+                </div>
+            </div>
+
+            <div class="about-management-card">
+                <label for="">Hakkımızda Ekranı İçin Yazı ve Resim Değiştirme</label>
+                <hr>
+                <center>
+                    <div id="about-card-editor"></div>
+                </center>
+
+                <div class="about-card-div">
+                    <div class="about-card-div-1">
+                        <input type="file" id="fileInput-3" />
+                        <input type="text" id="filePath-3" name="fileName" disabled /><br>
+                        <input type="button" id="file-selectButton-3" value="Dosya Seç">
+                        <input type="button" id="delete-button-3" value="Temizle">
+                    </div>
+
+                    <div class="about-card-div-2">
+                        <img src="{{ url_for('static', filename = 'img/imgSRC.jpg') }}" alt="" id="about-file-img">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="management-submit-card">
+            <img src="static/img/table-img.jpg" alt="">
+            <input type="text" name="username-management" id="username-management" value="{{username}}" disabled>
+            <input type="submit" id="save" value="Değişiklikleri Kaydet">
+
+            <div class="announcement-check">
+                <label for="">Seçili Duyuruyu Sil</label>
+                <input type="checkbox" class="delete-checkbox" id="delete-checkbox" value="Sil">
+            </div>
+        </div>
+    </form>
+
+
+    <div id="scroll-to-top" class="arrow-button-hidden">
+        <a href="#top">
+            <i class="fa fa-arrow-up"></i>
+        </a>
+    </div>
+
+</body>
+
+<!--DATATABLE LINKS-->
+<link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+<link
+    href="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.7.0/dt-1.13.6/af-2.6.0/b-2.4.2/b-colvis-2.4.2/b-html5-2.4.2/b-print-2.4.2/cr-1.7.0/date-1.5.1/fc-4.3.0/fh-3.4.0/kt-2.10.0/r-2.5.0/rg-1.4.1/rr-1.4.1/sc-2.2.0/sb-1.6.0/sp-2.2.0/datatables.min.css"
+    rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+<script
+    src="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.7.0/dt-1.13.6/af-2.6.0/b-2.4.2/b-colvis-2.4.2/b-html5-2.4.2/b-print-2.4.2/cr-1.7.0/date-1.5.1/fc-4.3.0/fh-3.4.0/kt-2.10.0/r-2.5.0/rg-1.4.1/rr-1.4.1/sc-2.2.0/sb-1.6.0/sp-2.2.0/datatables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<!--DATATABLE LINKS-->
+
+<!--DATATABLE EXTRA LINKS-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+<!--DATATABLE EXTRA LINKS-->
+
+<!--IMG SLIDER LINKS-->
+<script src="https://unpkg.com/@splidejs/splide@3.0.8/dist/js/splide.min.js"></script>
+<script src="path-to-the-script/splide-extension-auto-scroll.min.js"></script>
+<!--IMG SLIDER LINKS-->
+
+<!--ALERT LINK-->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!--ALERT LINK-->
+
+<!--TEXT EDITOR-->
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<!--TEXT EDITOR-->
+
+<script src="{{ url_for('static', filename = 'js/script.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/script2.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/script3.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/script4.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/script5.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/script6.js') }}"></script>
+
+</html>
